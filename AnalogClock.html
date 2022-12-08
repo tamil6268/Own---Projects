@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="AnalogClock.css">
+</head>
+<body>
+    <div class="analog-clock">
+        <div class="needle hrs"></div>
+        <div class="needle min"></div>
+        <div class="needle sec"></div>
+
+        <div class="number number-1">1</div>
+        <div class="number number-2">2</div>
+        <div class="number number-3">3</div>
+        <div class="number number-4">4</div>
+        <div class="number number-5">5</div>
+        <div class="number number-6">6</div>
+        <div class="number number-7">7</div>
+        <div class="number number-8">8</div>
+        <div class="number number-9">9</div>
+        <div class="number number-10">10</div>
+        <div class="number number-11">11</div>
+        <div class="number number-12">12</div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="text/Javascript">
+
+const hour=document.querySelector('.hrs');//dont forget to give . symbol
+const minute=document.querySelector('.min');
+const second=document.querySelector('.sec');
+
+setInterval(runClock,1000);
+
+function runClock(){
+    const time=new Date();
+    console.log(time);
+
+    const sec=time.getSeconds()/60;
+    const min=(sec+time.getMinutes())/60;
+    const hrs=(min+time.getHours())/12;
+    
+    hour.style.setProperty('--rotation',hrs*360);
+    minute.style.setProperty('--rotation',min*360);
+    second.style.setProperty('--rotation',sec*360);
+    }
+    runClock();
+    </script>
+</body>
+</html>

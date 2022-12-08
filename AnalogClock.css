@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=poppins:wght@300,400,500,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    pointer-events: none;
+}
+body{
+    background-color: rgb(97, 93, 93);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+}
+.analog-clock{
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 15px green;/*15px double green*/
+    border-style: double;
+    border-radius: 50%;
+}
+.analog-clock::before{
+    content: 'Analog-Clock';
+    color: green;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;/*to get the mini circle in center*/
+    transform: translate(-50%,-50%);
+}
+/*to get center mini circle ,as empty content*/
+.analog-clock::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;/*to get the mini circle in center*/
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border:2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+.number{
+    --rotate:0deg;/*from the bootstrap we can able to call the each variable we want*/
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    color: green;
+    text-align: center;
+    font-size: 25px;
+    transform: rotate(var(--rotate));
+}
+/* .number-1{
+    transform: rotate(30deg);
+} */
+.number-1{--rotate:30deg}
+.number-2{--rotate:60deg}
+.number-3{--rotate:90deg}
+.number-4{--rotate:120deg}
+.number-5{--rotate:150deg}
+.number-6{--rotate:180deg}
+.number-7{--rotate:210deg}
+.number-8{--rotate:240deg}
+.number-9{--rotate:270deg}
+.number-10{--rotate:300deg}
+.number-11{--rotate:330deg}
+
+.needle{
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    
+    height:34%;
+
+    transform-origin:bottom ;
+   transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+   z-index: 8;
+   border:1px solid black;
+   border-top-left-radius: 70%;
+   border-top-right-radius: 70%;
+}
+.sec{
+    height: 36%;
+}
+.min{
+    background-color: green;
+    width: 7px;
+    height: 30%;
+}
+.hrs{
+    background-color: green;
+    border: 3px solid black;
+    width: 12px;
+    height: 25%;
+}
