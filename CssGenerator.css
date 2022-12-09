@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+   width: 100vw;
+   height: 100vh;
+   background-color: rgb(105, 103, 103); 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tool{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    
+}
+.form-group{
+    padding: 25px 20px;
+    color: white;
+    display: flex;
+    flex-direction:column ;
+    gap: 10px;
+}
+.span{
+    background-color: white;
+    color: black;
+    padding:2px 4px;
+}
+.form-group textarea{
+    position: absolute;
+    top: 55%;
+    padding: 15px;
+    font-size: 16px;
+    width: 260px;
+    height: 80px;
+    resize: none;
+}
+.btn button{
+    color: black;
+    background-color: rgba(42, 125, 233, 0.849);
+    position: absolute;
+    bottom: 26%;
+    left: 47%;
+    padding: 5px;
+}
+.btn button:hover{
+    opacity: 0.6;
+}
+.outbox{
+    color: black;
+    display:inline ;
+}
+.outbox input{
+    position: relative;
+    top: 4px;
+    left: 6px;
+    width: 80px;
+}
+.outbox label{
+    color:white;
+    padding-left: 30px;
+}
+

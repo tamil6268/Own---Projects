@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Generator</title>
+    <link rel="stylesheet" href="CssGenerator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tool">
+
+            <div class="form-group">
+                <label for="Border-radius">Border-radius:
+                    <span class="span"id="all_values"></span>
+                </label>
+                <input type="range" value="0" min="0" max="250" name="" class="input" id="all">
+                <label for="Border">Border:
+                    <span class="span"id="border_value">0px</span> 
+                    <span class="outbox">
+                        <label for="color"style="color:white;">Color:</label>
+                        <input type="color" name="" id="color">
+                    </span>
+                </label>
+                <input type="range" value="0" min="0" max="50" name="" class="input" id="size">
+                <select name="" id="border_style">
+                    <option>solid</option>
+                    <option>dashed</option>
+                    <option>double</option>
+                    <option>dotted</option>
+                    <option>groove</option>
+                    <option>ridge</option>
+                    <option>inset</option>
+                    <option>outset</option>
+                    <option>none</option>
+                    <option>hidden</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea name="" id="code" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="btn">
+                <button>Copy Code</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="CssGenerator.js"type="text/Javascript"></script>
+</body>
+</html>
